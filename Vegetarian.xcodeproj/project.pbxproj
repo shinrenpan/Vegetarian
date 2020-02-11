@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A915796F2BA25C9222A1D9B2 /* Pods_Vegetarian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8C61E20AE72E3D55AF6603 /* Pods_Vegetarian.framework */; };
 		D70173B823D1C264006495E0 /* MapItemClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173B623D1C264006495E0 /* MapItemClusterView.swift */; };
 		D70173B923D1C264006495E0 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173B723D1C264006495E0 /* MapItemAnnotationView.swift */; };
 		D70173BE23D1D2A8006495E0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173BD23D1D2A8006495E0 /* ListViewController.swift */; };
@@ -36,14 +37,12 @@
 		D7C89F2523CF19930089BCA1 /* MapViewOutlet.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C89F2423CF19930089BCA1 /* MapViewOutlet.xib */; };
 		D7C89F2823CF3A6A0089BCA1 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F2723CF3A6A0089BCA1 /* MapItem.swift */; };
 		D7D73F4C23ED8A2000CBAD93 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D73F4B23ED8A2000CBAD93 /* UIButton+Extension.swift */; };
-		D7F9B48B23E9931C0081691F /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */; };
-		D7F9B48C23E9931C0081691F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */; };
-		D7F9B48D23E9931C0081691F /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */; };
-		D7F9B48F23E993240081691F /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48E23E993240081691F /* nanopb.framework */; };
 		D7F9B49123E9A7B30081691F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9B49023E9A7B30081691F /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062EDADD93A79C74FCD680CE /* Pods-Vegetarian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian.debug.xcconfig"; path = "Target Support Files/Pods-Vegetarian/Pods-Vegetarian.debug.xcconfig"; sourceTree = "<group>"; };
+		9F8C61E20AE72E3D55AF6603 /* Pods_Vegetarian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegetarian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70173B623D1C264006495E0 /* MapItemClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemClusterView.swift; sourceTree = "<group>"; };
 		D70173B723D1C264006495E0 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
 		D70173BD23D1D2A8006495E0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -75,11 +74,8 @@
 		D7C89F2423CF19930089BCA1 /* MapViewOutlet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewOutlet.xib; sourceTree = "<group>"; };
 		D7C89F2723CF3A6A0089BCA1 /* MapItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
 		D7D73F4B23ED8A2000CBAD93 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
-		D7F9B48E23E993240081691F /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		D7F9B49023E9A7B30081691F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EAFE446E2941C813667A889A /* Pods-Vegetarian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vegetarian.release.xcconfig"; path = "Target Support Files/Pods-Vegetarian/Pods-Vegetarian.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,16 +83,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F9B48D23E9931C0081691F /* GoogleUtilities.framework in Frameworks */,
-				D7F9B48C23E9931C0081691F /* GoogleMobileAds.framework in Frameworks */,
-				D7F9B48F23E993240081691F /* nanopb.framework in Frameworks */,
-				D7F9B48B23E9931C0081691F /* GoogleAppMeasurement.framework in Frameworks */,
+				A915796F2BA25C9222A1D9B2 /* Pods_Vegetarian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		205A0EB81AD1803F484A78BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F8C61E20AE72E3D55AF6603 /* Pods_Vegetarian.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		949BA93809830C426C2A6BC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				062EDADD93A79C74FCD680CE /* Pods-Vegetarian.debug.xcconfig */,
+				EAFE446E2941C813667A889A /* Pods-Vegetarian.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D70173B523D1C235006495E0 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,8 @@
 			children = (
 				D7C89F0823CF17610089BCA1 /* Vegetarian */,
 				D7C89F0723CF17610089BCA1 /* Products */,
+				949BA93809830C426C2A6BC1 /* Pods */,
+				205A0EB81AD1803F484A78BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,7 +226,6 @@
 				D746B6BA23F192D9003D88DE /* Parameter */,
 				D70173C123D1D413006495E0 /* Protocol */,
 				D7A8594223EF051100E08CFF /* SuggestionViewController */,
-				D7F9B48723E9928E0081691F /* Vendor */,
 			);
 			path = Vegetarian;
 			sourceTree = "<group>";
@@ -240,17 +251,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D7F9B48723E9928E0081691F /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */,
-				D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */,
-				D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */,
-				D7F9B48E23E993240081691F /* nanopb.framework */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7C89F1A23CF17650089BCA1 /* Build configuration list for PBXNativeTarget "Vegetarian" */;
 			buildPhases = (
+				79B435CB1876E1F624B4901E /* [CP] Check Pods Manifest.lock */,
 				D7C89F0223CF17610089BCA1 /* Sources */,
 				D7C89F0323CF17610089BCA1 /* Frameworks */,
 				D7C89F0423CF17610089BCA1 /* Resources */,
+				2F09E4C1F361901248BA2D78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +322,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F09E4C1F361901248BA2D78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian/Pods-Vegetarian-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vegetarian/Pods-Vegetarian-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vegetarian/Pods-Vegetarian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B435CB1876E1F624B4901E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vegetarian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7C89F0223CF17610089BCA1 /* Sources */ = {
@@ -482,22 +526,23 @@
 		};
 		D7C89F1B23CF17650089BCA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 062EDADD93A79C74FCD680CE /* Pods-Vegetarian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20200211;
 				DEVELOPMENT_TEAM = VZWPMD258L;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vegetarian/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Vegetarian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.9.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinrenpan.Vegetarian;
 				PRODUCT_NAME = "蔬店";
 				SWIFT_VERSION = 5.0;
@@ -507,22 +552,23 @@
 		};
 		D7C89F1C23CF17650089BCA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFE446E2941C813667A889A /* Pods-Vegetarian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20200211;
 				DEVELOPMENT_TEAM = VZWPMD258L;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vegetarian/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Vegetarian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.9.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinrenpan.Vegetarian;
 				PRODUCT_NAME = "蔬店";
 				SWIFT_VERSION = 5.0;
