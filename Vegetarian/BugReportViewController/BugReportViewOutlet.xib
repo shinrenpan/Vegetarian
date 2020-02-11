@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="BugReportViewOutlet" customClass="BugReportViewOutlet" customModule="Vegetarian" customModuleProvider="target">
+            <connections>
+                <outlet property="itemAddressLabel" destination="wve-kd-IDi" id="DHV-rd-cF1"/>
+                <outlet property="itemNameLabel" destination="9Np-br-aw8" id="ABM-rp-E7f"/>
+                <outlet property="mainView" destination="1IA-gT-Chu" id="8JZ-kT-vGS"/>
+                <outlet property="segment" destination="VYF-Mf-6wA" id="ZBS-TT-jYr"/>
+                <outlet property="textView" destination="wL4-Fe-wfB" id="5DL-aW-V6C"/>
+                <outlet property="textViewBottom" destination="eMk-IM-5Oc" id="7Mr-f8-WOn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1IA-gT-Chu">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VNy-3O-OmD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Np-br-aw8">
+                            <rect key="frame" x="8" y="8" width="304" height="20.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wve-kd-IDi">
+                            <rect key="frame" x="8" y="32.5" width="304" height="20.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvg-aW-lvR" userLabel="Line">
+                    <rect key="frame" x="8" y="61" width="304" height="0.5"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.59999999999999998" id="ocR-oK-MyG"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VYF-Mf-6wA">
+                    <rect key="frame" x="51" y="69.5" width="218" height="32"/>
+                    <segments>
+                        <segment title="名稱錯誤"/>
+                        <segment title="住址錯誤"/>
+                        <segment title="其他錯誤"/>
+                    </segments>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="註記" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-8u-POy">
+                    <rect key="frame" x="8" y="116.5" width="304" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wL4-Fe-wfB">
+                    <rect key="frame" x="8" y="145" width="304" height="415"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Utk-8u-POy" firstAttribute="leading" secondItem="3DF-95-SJg" secondAttribute="leading" constant="8" id="14N-9m-0go"/>
+                <constraint firstItem="VYF-Mf-6wA" firstAttribute="top" secondItem="Kvg-aW-lvR" secondAttribute="bottom" constant="8" id="37B-nf-6vu"/>
+                <constraint firstItem="Kvg-aW-lvR" firstAttribute="top" secondItem="VNy-3O-OmD" secondAttribute="bottom" id="8oG-x9-6ct"/>
+                <constraint firstItem="wL4-Fe-wfB" firstAttribute="top" secondItem="Utk-8u-POy" secondAttribute="bottom" constant="8" id="LKK-oM-Dzn"/>
+                <constraint firstItem="3DF-95-SJg" firstAttribute="trailing" secondItem="Kvg-aW-lvR" secondAttribute="trailing" constant="8" id="TCs-c7-D90"/>
+                <constraint firstItem="3DF-95-SJg" firstAttribute="trailing" secondItem="VNy-3O-OmD" secondAttribute="trailing" id="Uo5-0V-Fd4"/>
+                <constraint firstItem="3DF-95-SJg" firstAttribute="bottom" secondItem="wL4-Fe-wfB" secondAttribute="bottom" constant="8" id="eMk-IM-5Oc"/>
+                <constraint firstItem="Kvg-aW-lvR" firstAttribute="leading" secondItem="3DF-95-SJg" secondAttribute="leading" constant="8" id="eTv-so-4lh"/>
+                <constraint firstItem="VNy-3O-OmD" firstAttribute="top" secondItem="3DF-95-SJg" secondAttribute="top" id="joM-HV-jY9"/>
+                <constraint firstItem="Utk-8u-POy" firstAttribute="top" secondItem="VYF-Mf-6wA" secondAttribute="bottom" constant="16" id="rUb-lc-O3b"/>
+                <constraint firstItem="3DF-95-SJg" firstAttribute="trailing" secondItem="wL4-Fe-wfB" secondAttribute="trailing" constant="8" id="rrO-2C-7oi"/>
+                <constraint firstItem="VYF-Mf-6wA" firstAttribute="centerX" secondItem="1IA-gT-Chu" secondAttribute="centerX" id="rtb-dk-Hrn"/>
+                <constraint firstItem="VNy-3O-OmD" firstAttribute="leading" secondItem="3DF-95-SJg" secondAttribute="leading" id="tzy-O3-9oe"/>
+                <constraint firstItem="wL4-Fe-wfB" firstAttribute="leading" secondItem="3DF-95-SJg" secondAttribute="leading" constant="8" id="vWq-kK-rGQ"/>
+                <constraint firstItem="3DF-95-SJg" firstAttribute="trailing" secondItem="Utk-8u-POy" secondAttribute="trailing" constant="8" id="ymk-sb-KUi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="3DF-95-SJg"/>
+            <point key="canvasLocation" x="138.75" y="136.26760563380282"/>
+        </view>
+    </objects>
+</document>

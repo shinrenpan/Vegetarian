@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D70173B823D1C264006495E0 /* MapItemClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173B623D1C264006495E0 /* MapItemClusterView.swift */; };
+		D70173B923D1C264006495E0 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173B723D1C264006495E0 /* MapItemAnnotationView.swift */; };
+		D70173BE23D1D2A8006495E0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173BD23D1D2A8006495E0 /* ListViewController.swift */; };
+		D70173C023D1D2C7006495E0 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173BF23D1D2C7006495E0 /* ListViewModel.swift */; };
+		D70173C323D1D431006495E0 /* ViewOutletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173C223D1D431006495E0 /* ViewOutletable.swift */; };
+		D70173C523D1D58E006495E0 /* ListViewOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173C423D1D58E006495E0 /* ListViewOutlet.swift */; };
+		D70173C823D1D5E7006495E0 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70173C723D1D5E7006495E0 /* ListViewCell.swift */; };
+		D70173CA23D1D821006495E0 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70173C923D1D821006495E0 /* ListViewCell.xib */; };
+		D70173CC23D1DA65006495E0 /* ListViewOutlet.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70173CB23D1DA65006495E0 /* ListViewOutlet.xib */; };
+		D71BED2123D2205000895AA1 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71BED2023D2205000895AA1 /* GeoJSON.swift */; };
+		D746B6BC23F192F5003D88DE /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D746B6BB23F192F5003D88DE /* Parameter.swift */; };
+		D7A8594523EF057500E08CFF /* BugReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594423EF057400E08CFF /* BugReportViewController.swift */; };
+		D7A8594723EF058600E08CFF /* BugReportViewOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594623EF058600E08CFF /* BugReportViewOutlet.swift */; };
+		D7A8594923EF059700E08CFF /* BugReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594823EF059700E08CFF /* BugReportViewModel.swift */; };
+		D7A8594B23EF05AB00E08CFF /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594A23EF05AB00E08CFF /* SuggestionViewController.swift */; };
+		D7A8594D23EF05C100E08CFF /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594C23EF05C100E08CFF /* SuggestionViewModel.swift */; };
+		D7A8594F23EF05CE00E08CFF /* SuggestionViewOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8594E23EF05CE00E08CFF /* SuggestionViewOutlet.swift */; };
+		D7A8595123EF09DD00E08CFF /* SuggestionViewOutlet.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A8595023EF09DD00E08CFF /* SuggestionViewOutlet.xib */; };
+		D7A8595323F04E1400E08CFF /* BugReportViewOutlet.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A8595223F04E1400E08CFF /* BugReportViewOutlet.xib */; };
+		D7C89F0A23CF17610089BCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F0923CF17610089BCA1 /* AppDelegate.swift */; };
+		D7C89F0C23CF17610089BCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F0B23CF17610089BCA1 /* SceneDelegate.swift */; };
+		D7C89F1323CF17650089BCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C89F1223CF17650089BCA1 /* Assets.xcassets */; };
+		D7C89F1623CF17650089BCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C89F1423CF17650089BCA1 /* LaunchScreen.storyboard */; };
+		D7C89F1F23CF18180089BCA1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F1E23CF18180089BCA1 /* MapViewController.swift */; };
+		D7C89F2123CF192B0089BCA1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F2023CF192B0089BCA1 /* MapViewModel.swift */; };
+		D7C89F2323CF195F0089BCA1 /* MapViewOutlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F2223CF195F0089BCA1 /* MapViewOutlet.swift */; };
+		D7C89F2523CF19930089BCA1 /* MapViewOutlet.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C89F2423CF19930089BCA1 /* MapViewOutlet.xib */; };
+		D7C89F2823CF3A6A0089BCA1 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C89F2723CF3A6A0089BCA1 /* MapItem.swift */; };
+		D7D73F4C23ED8A2000CBAD93 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D73F4B23ED8A2000CBAD93 /* UIButton+Extension.swift */; };
+		D7F9B48B23E9931C0081691F /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */; };
+		D7F9B48C23E9931C0081691F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */; };
+		D7F9B48D23E9931C0081691F /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */; };
+		D7F9B48F23E993240081691F /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9B48E23E993240081691F /* nanopb.framework */; };
+		D7F9B49123E9A7B30081691F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9B49023E9A7B30081691F /* UIView+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D70173B623D1C264006495E0 /* MapItemClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemClusterView.swift; sourceTree = "<group>"; };
+		D70173B723D1C264006495E0 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
+		D70173BD23D1D2A8006495E0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D70173BF23D1D2C7006495E0 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D70173C223D1D431006495E0 /* ViewOutletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutletable.swift; sourceTree = "<group>"; };
+		D70173C423D1D58E006495E0 /* ListViewOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewOutlet.swift; sourceTree = "<group>"; };
+		D70173C723D1D5E7006495E0 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		D70173C923D1D821006495E0 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
+		D70173CB23D1DA65006495E0 /* ListViewOutlet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewOutlet.xib; sourceTree = "<group>"; };
+		D71BED2023D2205000895AA1 /* GeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
+		D746B6BB23F192F5003D88DE /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		D7A8594423EF057400E08CFF /* BugReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReportViewController.swift; sourceTree = "<group>"; };
+		D7A8594623EF058600E08CFF /* BugReportViewOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReportViewOutlet.swift; sourceTree = "<group>"; };
+		D7A8594823EF059700E08CFF /* BugReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReportViewModel.swift; sourceTree = "<group>"; };
+		D7A8594A23EF05AB00E08CFF /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		D7A8594C23EF05C100E08CFF /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
+		D7A8594E23EF05CE00E08CFF /* SuggestionViewOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewOutlet.swift; sourceTree = "<group>"; };
+		D7A8595023EF09DD00E08CFF /* SuggestionViewOutlet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewOutlet.xib; sourceTree = "<group>"; };
+		D7A8595223F04E1400E08CFF /* BugReportViewOutlet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BugReportViewOutlet.xib; sourceTree = "<group>"; };
+		D7C89F0623CF17610089BCA1 /* 蔬店.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "蔬店.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C89F0923CF17610089BCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7C89F0B23CF17610089BCA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7C89F1223CF17650089BCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7C89F1523CF17650089BCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7C89F1723CF17650089BCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7C89F1E23CF18180089BCA1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D7C89F2023CF192B0089BCA1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D7C89F2223CF195F0089BCA1 /* MapViewOutlet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewOutlet.swift; sourceTree = "<group>"; };
+		D7C89F2423CF19930089BCA1 /* MapViewOutlet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewOutlet.xib; sourceTree = "<group>"; };
+		D7C89F2723CF3A6A0089BCA1 /* MapItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
+		D7D73F4B23ED8A2000CBAD93 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		D7F9B48E23E993240081691F /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		D7F9B49023E9A7B30081691F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7C89F0323CF17610089BCA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F9B48D23E9931C0081691F /* GoogleUtilities.framework in Frameworks */,
+				D7F9B48C23E9931C0081691F /* GoogleMobileAds.framework in Frameworks */,
+				D7F9B48F23E993240081691F /* nanopb.framework in Frameworks */,
+				D7F9B48B23E9931C0081691F /* GoogleAppMeasurement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D70173B523D1C235006495E0 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D70173B723D1C264006495E0 /* MapItemAnnotationView.swift */,
+				D70173B623D1C264006495E0 /* MapItemClusterView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D70173BB23D1C287006495E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D7C89F1723CF17650089BCA1 /* Info.plist */,
+				D7C89F0923CF17610089BCA1 /* AppDelegate.swift */,
+				D7C89F0B23CF17610089BCA1 /* SceneDelegate.swift */,
+				D7C89F1423CF17650089BCA1 /* LaunchScreen.storyboard */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		D70173BC23D1D292006495E0 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D70173C623D1D5D4006495E0 /* CustomView */,
+				D70173BD23D1D2A8006495E0 /* ListViewController.swift */,
+				D70173BF23D1D2C7006495E0 /* ListViewModel.swift */,
+				D70173C423D1D58E006495E0 /* ListViewOutlet.swift */,
+				D70173CB23D1DA65006495E0 /* ListViewOutlet.xib */,
+			);
+			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		D70173C123D1D413006495E0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D70173C223D1D431006495E0 /* ViewOutletable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D70173C623D1D5D4006495E0 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D70173C723D1D5E7006495E0 /* ListViewCell.swift */,
+				D70173C923D1D821006495E0 /* ListViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D71BED2223D3307C00895AA1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D7D73F4B23ED8A2000CBAD93 /* UIButton+Extension.swift */,
+				D7F9B49023E9A7B30081691F /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D746B6BA23F192D9003D88DE /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				D746B6BB23F192F5003D88DE /* Parameter.swift */,
+			);
+			path = Parameter;
+			sourceTree = "<group>";
+		};
+		D7A8594223EF051100E08CFF /* SuggestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7A8594A23EF05AB00E08CFF /* SuggestionViewController.swift */,
+				D7A8594C23EF05C100E08CFF /* SuggestionViewModel.swift */,
+				D7A8594E23EF05CE00E08CFF /* SuggestionViewOutlet.swift */,
+				D7A8595023EF09DD00E08CFF /* SuggestionViewOutlet.xib */,
+			);
+			path = SuggestionViewController;
+			sourceTree = "<group>";
+		};
+		D7A8594323EF052200E08CFF /* BugReportViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7A8594423EF057400E08CFF /* BugReportViewController.swift */,
+				D7A8594823EF059700E08CFF /* BugReportViewModel.swift */,
+				D7A8594623EF058600E08CFF /* BugReportViewOutlet.swift */,
+				D7A8595223F04E1400E08CFF /* BugReportViewOutlet.xib */,
+			);
+			path = BugReportViewController;
+			sourceTree = "<group>";
+		};
+		D7C89EFD23CF17600089BCA1 = {
+			isa = PBXGroup;
+			children = (
+				D7C89F0823CF17610089BCA1 /* Vegetarian */,
+				D7C89F0723CF17610089BCA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7C89F0723CF17610089BCA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7C89F0623CF17610089BCA1 /* 蔬店.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7C89F0823CF17610089BCA1 /* Vegetarian */ = {
+			isa = PBXGroup;
+			children = (
+				D70173BB23D1C287006495E0 /* App */,
+				D7C89F1223CF17650089BCA1 /* Assets.xcassets */,
+				D7A8594323EF052200E08CFF /* BugReportViewController */,
+				D71BED2223D3307C00895AA1 /* Extension */,
+				D70173BC23D1D292006495E0 /* ListViewController */,
+				D7C89F1D23CF17EB0089BCA1 /* MapViewController */,
+				D7C89F2623CF3A4C0089BCA1 /* Model */,
+				D746B6BA23F192D9003D88DE /* Parameter */,
+				D70173C123D1D413006495E0 /* Protocol */,
+				D7A8594223EF051100E08CFF /* SuggestionViewController */,
+				D7F9B48723E9928E0081691F /* Vendor */,
+			);
+			path = Vegetarian;
+			sourceTree = "<group>";
+		};
+		D7C89F1D23CF17EB0089BCA1 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D70173B523D1C235006495E0 /* CustomView */,
+				D7C89F1E23CF18180089BCA1 /* MapViewController.swift */,
+				D7C89F2023CF192B0089BCA1 /* MapViewModel.swift */,
+				D7C89F2223CF195F0089BCA1 /* MapViewOutlet.swift */,
+				D7C89F2423CF19930089BCA1 /* MapViewOutlet.xib */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		D7C89F2623CF3A4C0089BCA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D71BED2023D2205000895AA1 /* GeoJSON.swift */,
+				D7C89F2723CF3A6A0089BCA1 /* MapItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7F9B48723E9928E0081691F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D7F9B48823E9931B0081691F /* GoogleAppMeasurement.framework */,
+				D7F9B48923E9931C0081691F /* GoogleMobileAds.framework */,
+				D7F9B48A23E9931C0081691F /* GoogleUtilities.framework */,
+				D7F9B48E23E993240081691F /* nanopb.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7C89F0523CF17610089BCA1 /* Vegetarian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7C89F1A23CF17650089BCA1 /* Build configuration list for PBXNativeTarget "Vegetarian" */;
+			buildPhases = (
+				D7C89F0223CF17610089BCA1 /* Sources */,
+				D7C89F0323CF17610089BCA1 /* Frameworks */,
+				D7C89F0423CF17610089BCA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vegetarian;
+			productName = Vegetarian;
+			productReference = D7C89F0623CF17610089BCA1 /* 蔬店.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7C89EFE23CF17600089BCA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Shinren Pan";
+				TargetAttributes = {
+					D7C89F0523CF17610089BCA1 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = D7C89F0123CF17610089BCA1 /* Build configuration list for PBXProject "Vegetarian" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7C89EFD23CF17600089BCA1;
+			productRefGroup = D7C89F0723CF17610089BCA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7C89F0523CF17610089BCA1 /* Vegetarian */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7C89F0423CF17610089BCA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70173CA23D1D821006495E0 /* ListViewCell.xib in Resources */,
+				D7A8595323F04E1400E08CFF /* BugReportViewOutlet.xib in Resources */,
+				D7C89F1623CF17650089BCA1 /* LaunchScreen.storyboard in Resources */,
+				D7C89F1323CF17650089BCA1 /* Assets.xcassets in Resources */,
+				D7A8595123EF09DD00E08CFF /* SuggestionViewOutlet.xib in Resources */,
+				D7C89F2523CF19930089BCA1 /* MapViewOutlet.xib in Resources */,
+				D70173CC23D1DA65006495E0 /* ListViewOutlet.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7C89F0223CF17610089BCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70173C023D1D2C7006495E0 /* ListViewModel.swift in Sources */,
+				D7A8594F23EF05CE00E08CFF /* SuggestionViewOutlet.swift in Sources */,
+				D7C89F0A23CF17610089BCA1 /* AppDelegate.swift in Sources */,
+				D746B6BC23F192F5003D88DE /* Parameter.swift in Sources */,
+				D7F9B49123E9A7B30081691F /* UIView+Extension.swift in Sources */,
+				D7D73F4C23ED8A2000CBAD93 /* UIButton+Extension.swift in Sources */,
+				D70173B923D1C264006495E0 /* MapItemAnnotationView.swift in Sources */,
+				D71BED2123D2205000895AA1 /* GeoJSON.swift in Sources */,
+				D70173C823D1D5E7006495E0 /* ListViewCell.swift in Sources */,
+				D7C89F1F23CF18180089BCA1 /* MapViewController.swift in Sources */,
+				D7C89F0C23CF17610089BCA1 /* SceneDelegate.swift in Sources */,
+				D7A8594523EF057500E08CFF /* BugReportViewController.swift in Sources */,
+				D7A8594723EF058600E08CFF /* BugReportViewOutlet.swift in Sources */,
+				D7C89F2323CF195F0089BCA1 /* MapViewOutlet.swift in Sources */,
+				D70173C323D1D431006495E0 /* ViewOutletable.swift in Sources */,
+				D7A8594B23EF05AB00E08CFF /* SuggestionViewController.swift in Sources */,
+				D70173BE23D1D2A8006495E0 /* ListViewController.swift in Sources */,
+				D70173B823D1C264006495E0 /* MapItemClusterView.swift in Sources */,
+				D7C89F2123CF192B0089BCA1 /* MapViewModel.swift in Sources */,
+				D7A8594D23EF05C100E08CFF /* SuggestionViewModel.swift in Sources */,
+				D7A8594923EF059700E08CFF /* BugReportViewModel.swift in Sources */,
+				D7C89F2823CF3A6A0089BCA1 /* MapItem.swift in Sources */,
+				D70173C523D1D58E006495E0 /* ListViewOutlet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7C89F1423CF17650089BCA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7C89F1523CF17650089BCA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7C89F1823CF17650089BCA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7C89F1923CF17650089BCA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7C89F1B23CF17650089BCA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200211;
+				DEVELOPMENT_TEAM = VZWPMD258L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vegetarian/Vendor",
+				);
+				INFOPLIST_FILE = Vegetarian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinrenpan.Vegetarian;
+				PRODUCT_NAME = "蔬店";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D7C89F1C23CF17650089BCA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20200211;
+				DEVELOPMENT_TEAM = VZWPMD258L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vegetarian/Vendor",
+				);
+				INFOPLIST_FILE = Vegetarian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinrenpan.Vegetarian;
+				PRODUCT_NAME = "蔬店";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7C89F0123CF17610089BCA1 /* Build configuration list for PBXProject "Vegetarian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C89F1823CF17650089BCA1 /* Debug */,
+				D7C89F1923CF17650089BCA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7C89F1A23CF17650089BCA1 /* Build configuration list for PBXNativeTarget "Vegetarian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C89F1B23CF17650089BCA1 /* Debug */,
+				D7C89F1C23CF17650089BCA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7C89EFE23CF17600089BCA1 /* Project object */;
+}
