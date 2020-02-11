@@ -1,6 +1,6 @@
 # file options
 
---exclude **/Vendor
+--exclude **/Vendor,Pods
 
 # format options
 
