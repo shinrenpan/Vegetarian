@@ -6,13 +6,30 @@ import UIKit
 
 final class SuggestionViewModel {
 
-    private(set) var text: String = "" {
+    private(set) var itemName: String = "" {
         didSet {
-            sendEnable = !text.isEmpty
+            __setupSendEnable()
         }
     }
 
-    @Published private(set) var suggestionType = SuggestionType.suggestion
+    private var itemAddress: String = "" {
+        didSet {
+            __setupSendEnable()
+        }
+    }
+
+    private(set) var suggestion: String = "" {
+        didSet {
+            __setupSendEnable()
+        }
+    }
+
+    @Published private(set) var suggestionType = SuggestionType.suggestion {
+        didSet {
+            __setupSendEnable()
+        }
+    }
+
     @Published private(set) var sendEnable = false
 }
 
@@ -41,15 +58,6 @@ extension SuggestionViewModel {
                 return "New"
             }
         }
-
-        var description: String {
-            switch self {
-            case .suggestion:
-                return "請輸入建議事項"
-            case .new:
-                return "新增店家必須包含名稱與住址"
-            }
-        }
     }
 }
 
@@ -57,8 +65,16 @@ extension SuggestionViewModel {
 
 extension SuggestionViewModel {
 
-    func updateText(_ newValue: String) {
-        text = newValue
+    func updateItemName(_ newValue: String) {
+        itemName = newValue
+    }
+
+    func updateItemAddress(_ newValue: String) {
+        itemAddress = newValue
+    }
+
+    func updateSuggestion(_ newValue: String) {
+        suggestion = newValue
     }
 
     func updateSuggestionType(_ segment: UISegmentedControl) {
@@ -88,12 +104,38 @@ extension SuggestionViewModel {
 private extension SuggestionViewModel {
 
     func __makeRequestHTTPBody() -> Data? {
+        var body: String
+
+        switch suggestionType {
+        case .suggestion:
+            body = suggestion
+        case .new:
+            body = """
+            店名: \(itemName)
+            住址: \(itemAddress)
+            """
+        }
+
         let parameters: [String: Any] = [
             "title": suggestionType.title,
             "labels": [suggestionType.gitHubLabel],
-            "body": text,
+            "body": body,
         ]
 
         return try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+    }
+}
+
+// MARK: - Setup
+
+private extension SuggestionViewModel {
+
+    func __setupSendEnable() {
+        switch suggestionType {
+        case .suggestion:
+            sendEnable = !suggestion.isEmpty
+        case .new:
+            sendEnable = !itemName.isEmpty && !itemAddress.isEmpty
+        }
     }
 }

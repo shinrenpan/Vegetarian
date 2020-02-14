@@ -7,13 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="SuggestionViewOutlet" customClass="SuggestionViewOutlet" customModule="Vegetarian" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="SuggestionViewOutlet" customClass="SuggestionViewOutlet" customModule="蔬店" customModuleProvider="target">
             <connections>
-                <outlet property="descriptionLabel" destination="17I-ZK-UeK" id="F2x-Bg-F9v"/>
+                <outlet property="addressField" destination="Lut-fu-6q3" id="hhw-5f-v9c"/>
+                <outlet property="addressTitle" destination="3Pg-La-lUL" id="eXZ-r8-cGj"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="8qh-h2-qCN"/>
+                <outlet property="nameField" destination="fRI-Mn-RzM" id="oBV-uo-vFb"/>
+                <outlet property="nameTitle" destination="i6c-uo-xYz" id="Lqg-N0-mhc"/>
                 <outlet property="segment" destination="CY0-Cl-a6o" id="5vH-Gy-oiI"/>
-                <outlet property="textView" destination="yVg-jT-31O" id="1Tw-uF-Py2"/>
-                <outlet property="textViewBottom" destination="Lr2-72-fHO" id="u8x-6L-mzb"/>
+                <outlet property="stackBottom" destination="IfP-mz-pLn" id="LcC-FW-7fG"/>
+                <outlet property="textView" destination="7VJ-rr-LoA" id="kXQ-hm-ZYv"/>
+                <outlet property="textViewTitle" destination="Kbk-fN-QTH" id="PMW-4b-g54"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,38 +25,60 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-Cl-a6o">
-                    <rect key="frame" x="87.5" y="8" width="145" height="32"/>
-                    <segments>
-                        <segment title="建議事項"/>
-                        <segment title="新增店家"/>
-                    </segments>
-                </segmentedControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入建議事項" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17I-ZK-UeK">
-                    <rect key="frame" x="8" y="47" width="304" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yVg-jT-31O">
-                    <rect key="frame" x="8" y="72" width="304" height="488"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sIs-at-KQi">
+                    <rect key="frame" x="8" y="8" width="304" height="298"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-Cl-a6o">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="32"/>
+                            <segments>
+                                <segment title="建議事項"/>
+                                <segment title="新增店家"/>
+                            </segments>
+                        </segmentedControl>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建議內容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-fN-QTH">
+                            <rect key="frame" x="0.0" y="39" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="100" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7VJ-rr-LoA">
+                            <rect key="frame" x="0.0" y="64" width="304" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="D5E-jG-L8e"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店家名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6c-uo-xYz">
+                            <rect key="frame" x="0.0" y="172" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRI-Mn-RzM">
+                            <rect key="frame" x="0.0" y="197" width="304" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店家住址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-La-lUL">
+                            <rect key="frame" x="0.0" y="239" width="304" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-fu-6q3">
+                            <rect key="frame" x="0.0" y="264" width="304" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="yVg-jT-31O" firstAttribute="top" secondItem="17I-ZK-UeK" secondAttribute="bottom" constant="8" id="9J6-dy-WQ4"/>
-                <constraint firstItem="17I-ZK-UeK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="IDo-tu-5eT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yVg-jT-31O" secondAttribute="bottom" constant="8" id="Lr2-72-fHO"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="17I-ZK-UeK" secondAttribute="trailing" constant="8" id="NY8-bI-oco"/>
-                <constraint firstItem="CY0-Cl-a6o" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="QG3-bz-VY0"/>
-                <constraint firstItem="CY0-Cl-a6o" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RVh-56-itl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yVg-jT-31O" secondAttribute="trailing" constant="8" id="S5u-xg-fGA"/>
-                <constraint firstItem="17I-ZK-UeK" firstAttribute="top" secondItem="CY0-Cl-a6o" secondAttribute="bottom" constant="8" id="kEy-8G-KHr"/>
-                <constraint firstItem="yVg-jT-31O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="zQf-NS-AsX"/>
+                <constraint firstItem="sIs-at-KQi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="EeV-ol-35X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sIs-at-KQi" secondAttribute="bottom" constant="8" id="IfP-mz-pLn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sIs-at-KQi" secondAttribute="trailing" constant="8" id="X1T-Ev-cN1"/>
+                <constraint firstItem="sIs-at-KQi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="ydQ-OG-5Fd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="137"/>

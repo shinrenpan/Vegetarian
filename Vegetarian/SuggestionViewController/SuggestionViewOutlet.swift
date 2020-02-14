@@ -7,6 +7,8 @@ import UIKit
 final class SuggestionViewOutlet: NSObject, ViewOutletable {
 
     @IBOutlet private(set) var mainView: UIView!
+    @IBOutlet private(set) var segment: UISegmentedControl!
+    @IBOutlet private(set) var textViewTitle: UILabel!
 
     @IBOutlet private(set) var textView: UITextView! {
         didSet {
@@ -14,9 +16,11 @@ final class SuggestionViewOutlet: NSObject, ViewOutletable {
         }
     }
 
-    @IBOutlet private(set) var textViewBottom: NSLayoutConstraint!
-    @IBOutlet private(set) var segment: UISegmentedControl!
-    @IBOutlet private(set) var descriptionLabel: UILabel!
+    @IBOutlet private(set) var nameTitle: UILabel!
+    @IBOutlet private(set) var nameField: UITextField!
+    @IBOutlet private(set) var addressTitle: UILabel!
+    @IBOutlet private(set) var addressField: UITextField!
+    @IBOutlet private(set) var stackBottom: NSLayoutConstraint!
 
     private(set) lazy var cancelItem: UIBarButtonItem = {
         UIBarButtonItem(title: "離開", style: .done, target: nil, action: nil)
@@ -32,6 +36,10 @@ final class SuggestionViewOutlet: NSObject, ViewOutletable {
 extension SuggestionViewOutlet {
 
     func reloadUIWhenKeyboardDidChangeFrame(_ notification: Notification) {
+        if textView.isHidden {
+            return
+        }
+
         let userInfo = notification.userInfo!
         let beginFrameValue = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)!
         let beginFrame = beginFrameValue.cgRectValue
@@ -42,14 +50,33 @@ extension SuggestionViewOutlet {
             return
         }
         else {
-            textViewBottom.constant = endFrame.height + 8
+            stackBottom.constant = endFrame.height + 8
         }
     }
 
     func reloadUIWithSuggestionType(_ type: SuggestionViewModel.SuggestionType) {
+        nameField.text = ""
+        addressField.text = ""
         textView.text = ""
-        sendItem.isEnabled = false
-        descriptionLabel.text = type.description
+
+        switch type {
+        case .suggestion:
+            nameTitle.isHidden = true
+            nameField.isHidden = true
+            addressTitle.isHidden = true
+            addressField.isHidden = true
+            textViewTitle.isHidden = false
+            textView.isHidden = false
+            textView.becomeFirstResponder()
+        case .new:
+            nameTitle.isHidden = false
+            nameField.isHidden = false
+            addressTitle.isHidden = false
+            addressField.isHidden = false
+            textViewTitle.isHidden = true
+            textView.isHidden = true
+            nameField.becomeFirstResponder()
+        }
     }
 }
 

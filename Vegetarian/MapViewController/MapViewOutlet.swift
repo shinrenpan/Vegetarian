@@ -332,8 +332,6 @@ private extension MapViewOutlet {
     func __makeLocateCoordinateRegion(location: CLLocation) -> MKCoordinateRegion {
         var span = mapView.region.span
 
-        print(span)
-
         if span.latitudeDelta > 0.03 && span.longitudeDelta > 0.03 {
             span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
         }

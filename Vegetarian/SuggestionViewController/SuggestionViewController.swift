@@ -42,7 +42,7 @@ extension SuggestionViewController {
 extension SuggestionViewController: UITextViewDelegate {
 
     func textViewDidChange(_ textView: UITextView) {
-        _viewModel.updateText(textView.text)
+        _viewModel.updateSuggestion(textView.text)
     }
 }
 
@@ -55,7 +55,6 @@ private extension SuggestionViewController {
         navigationItem.leftBarButtonItem = _viewOutlet.cancelItem
         navigationItem.rightBarButtonItem = _viewOutlet.sendItem
         _viewOutlet.textView.delegate = self
-        _viewOutlet.textView.becomeFirstResponder()
     }
 }
 
@@ -72,6 +71,9 @@ private extension SuggestionViewController {
         _viewModel.$suggestionType
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
+                self?._viewModel.updateItemName("")
+                self?._viewModel.updateItemAddress("")
+                self?._viewModel.updateSuggestion("")
                 self?._viewOutlet.reloadUIWithSuggestionType($0)
             }
             .store(in: &_bindings)
@@ -93,6 +95,18 @@ private extension SuggestionViewController {
             action: #selector(__segmentValueChanged(_:)),
             for: .valueChanged
         )
+
+        _viewOutlet.nameField.addTarget(
+            self,
+            action: #selector(__nameFieldEditingChanged(_:)),
+            for: .editingChanged
+        )
+
+        _viewOutlet.addressField.addTarget(
+            self,
+            action: #selector(__addressFieldEditingChanged(_:)),
+            for: .editingChanged
+        )
     }
 }
 
@@ -111,5 +125,13 @@ private extension SuggestionViewController {
 
     @objc func __segmentValueChanged(_ sender: UISegmentedControl) {
         _viewModel.updateSuggestionType(sender)
+    }
+
+    @objc func __nameFieldEditingChanged(_ sender: UITextField) {
+        _viewModel.updateItemName(sender.text ?? "")
+    }
+
+    @objc func __addressFieldEditingChanged(_ sender: UITextField) {
+        _viewModel.updateItemAddress(sender.text ?? "")
     }
 }
