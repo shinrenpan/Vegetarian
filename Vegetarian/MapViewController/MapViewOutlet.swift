@@ -139,7 +139,7 @@ extension MapViewOutlet {
         downloadButton.tintColor = .systemRed
         suggestionButton.isEnabled = true
         __setupLocateButtonEnable()
-        __showToastWithText("初始化資料失敗\n請點擊資料更新.", color: .systemRed, autoHidden: false)
+        __showToastWithText("本地端沒有資料\n請點擊更新資料", color: .systemRed, autoHidden: false)
     }
 }
 
