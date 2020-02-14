@@ -193,10 +193,7 @@ extension MapViewOutlet {
             return
         }
 
-        let region = MKCoordinateRegion(
-            center: location.coordinate,
-            span: mapView.region.span
-        )
+        let region = __makeLocateCoordinateRegion(location: location)
 
         mapView.setRegion(region, animated: true)
     }
@@ -247,6 +244,19 @@ extension MapViewOutlet {
 private extension MapViewOutlet {
 
     func __setupMapView() {
+        
+        // 原生的指南針會擋到, 所以新增一個不會擋到的指南針
+        mapView.showsCompass = false
+        let compass = MKCompassButton(mapView:mapView)
+        compass.compassVisibility = .adaptive
+        compass.translatesAutoresizingMaskIntoConstraints = false
+        mainView.addSubview(compass)
+        let safeArea = mainView.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            compass.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 8),
+            compass.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8)
+        ])
+        
         mapView.showsUserLocation = true
 
         // 阻止 UserLocation show callout
@@ -317,5 +327,17 @@ private extension MapViewOutlet {
         }
 
         return String(format: "%.0f 公尺", radius)
+    }
+
+    func __makeLocateCoordinateRegion(location: CLLocation) -> MKCoordinateRegion {
+        var span = mapView.region.span
+
+        print(span)
+
+        if span.latitudeDelta > 0.03 && span.longitudeDelta > 0.03 {
+            span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+        }
+
+        return MKCoordinateRegion(center: location.coordinate, span: span)
     }
 }
